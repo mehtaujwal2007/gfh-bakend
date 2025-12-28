@@ -1,0 +1,96 @@
+/* Tailwind base layers (if you're using Tailwind via CDN or postcss) */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Smooth scrolling for anchor navigation */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Global body styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Animations */
+.fade-up {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.8s ease forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Header shadow effect */
+.header-shadow {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Section spacing */
+.section {
+  padding: 4rem 1rem;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+/* Button styling */
+.btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.primary-btn {
+  background-color: #ec4899; /* pink-500 */
+  color: white;
+}
+
+.primary-btn:hover {
+  background-color: #db2777; /* pink-600 */
+  transform: scale(1.05);
+}
+
+/* Success message */
+.success-message {
+  color: green;
+  font-weight: 500;
+  margin-top: 1rem;
+}
+
+/* Feedback section */
+.feedback-section {
+  background-color: #f9fafb;
+  padding: 4rem 1rem;
+}
+
+.feedback-section input,
+.feedback-section textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+}
+
+.dark .feedback-section {
+  background-color: #1f2937; /* gray-800 */
+}
+
+.dark .feedback-section input,
+.dark .feedback-section textarea {
+  background-color: #374151;
+  color: white;
+  border: 1px solid #555;
+}
